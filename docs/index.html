@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(blue.png);
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #1243705b;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            text-align: left;
+        }
+        h1, h2 {
+            color: #E0FFFF	;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        
+        input[type="text"], input[type="email"], input[type="date"], textarea, option {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 20px auto;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .radio-group label {
+            margin-left: 10px;
+        }
+        .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+        .select-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .select-container label{
+            margin-right: 10px;
+        }
+
+        @media screen and (max-width: 399px) {
+        body {
+        background-color: #97d827;
+        color: rgb(249, 249, 219);}
+        }
+
+        @media screen and (min-width: 400px) {
+        body {
+        background-color: rgb(227, 161, 161);
+        color: #B0E0E6}
+        }
+
+        @media screen and (min-width: 600px) {
+        body {
+        background-color: rgb(48, 14, 238);
+        color: white;}
+        }
+        
+        @media screen and (min-width: 700px) {
+        body {
+        background-image: url(blue.png);
+        color:bisque;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container"
+    <center><table>
+        <h1><center>FORM PENDAFTARAN <span style="color: #B0E0E6;">ASISTEN</span></center></h1>
+        <h2>Data Mahasiswa</h2>
+        <form method="POST" action="salsa.php" >
+             <tr>
+                 <label for="nama">Nama Lengkap:</label>
+                 <input type="text" id="nama" name="nama">
+            </tr>
+            
+            <tr>
+                 <label for="nim">NIM:</label>
+                <input type="text" id= "nim" name="nim">
+            </tr>
+        
+            <tr>
+                 <label for="tempat">Tempat Lahir:</label>
+                <input type="text"  id="tempat"  name="tempat">
+            </tr>
+            
+            <tr>
+                 <label for="tanggal">Tanggal Lahir:</label>
+                <input type="date"  id="tanggal"   name="tanggal">
+            </tr>
+
+            <tr>
+                <label for="tlp">No.Telp:</label>
+                <input type="text" id="tlp"  name="tlp">
+            </tr>
+
+            <tr>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </tr>
+
+            <div class="radio-group">
+                <label for="opsi">Jenis Kelamin:</label>
+                <label for="Laki-laki">
+                    <input type="radio" id="kelamin" name="opsi" value="Laki-laki">Laki-laki</label>
+                <label for="Perempuan">
+                    <input type="radio" id="kelamin" name="opsi" value="Perempuan">Perempuan</label>
+            </div>
+
+            <div class="select-container">
+                <label for="select">Pilihan Dapartemen : </label><br>
+                <select name="select" id="select">
+                    <option value="option1"></option>
+                    <option value="option1">PSDM</option>
+                    <option value="option2">DAGRI</option>
+                    <option value="option3">SOSMAS</option>
+                    <option value="option3">MIN-BAK</option>
+                    <option value="option3">KOMINFO</option>
+                </select>
+
+            </div>
+
+        </center></table>
+        <br>
+
+    <input type="submit" value="Save"> 
+    <input type="submit" value="Reset">
+    </form>
+    </div>
+
+</body>
+</html>
